@@ -50,7 +50,7 @@ class Patient extends React.Component {
                     <button className={`btn ${this.inVisitClass()}`} title="Chat" onClick={this.updateParentState}>
                         <i className="fa fa-comment" aria-hidden="true"></i>
                     </button>
-                    <a  className={`btn ${this.inVisitClass()}`} title="Video" onClick={this.handleBusy}>
+                    <a href={`vsee:${this.props.patient.email}`} className={`btn ${this.inVisitClass()}`} title="Video" onClick={this.handleBusy}>
                         <i className="fa fa-video-camera" aria-hidden="true"></i>
                     </a>
                     <button className={`btn ${this.inVisitClass()}`}>...</button>

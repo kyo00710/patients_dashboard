@@ -1,0 +1,57 @@
+.chat_block {
+  display: block;
+  position: fixed;
+  width: 400px;
+  bottom: 10px;
+  right: 10px;
+  background: #e4e9f0;
+  transition-timing-function: ease-out;
+  transition: 0.2s;
+  transform: translateY(0);
+}
+.chat_block .pn-msg-list--light {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.toggle {
+  transition-timing-function: ease-in !important;
+  transition: 0.25s;
+  transform: translateY(95%) !important;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+footer a {
+  color: #78a949;
+  text-decoration: none;
+}
+
+#enter_room_fieldset {
+  border: 1px solid #78a949;
+  border-radius: 5px;
+}
+#enter_room_fieldset legend {
+  color: white;
+  background: #78a949;
+}
+#enter_room_fieldset .required {
+  color: red;
+  vertical-align: middle;
+}
+#enter_room_fieldset .optional {
+  color: gray;
+  font-weight: normal;
+}
+#enter_room_fieldset .submit {
+  color: white;
+  font-weight: bold;
+}
+#enter_room_fieldset .foot {
+  border-top: 1px solid #cdcdcd;
+}
+#enter_room_fieldset .foot a {
+  color: #78a949;
+}

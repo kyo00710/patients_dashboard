@@ -1,0 +1,51 @@
+@import 'chat.scss';
+@import "_footer.scss";
+
+#dashboard {
+    &_fieldset {
+        border: 1px solid #78a949;
+        border-radius: 5px;
+
+        legend {
+            color: white;
+            background: #78a949;
+        }
+    }
+
+    .row {
+        margin: 10px 5px;
+        padding: 10px 0 0 0;
+
+        & + .row {
+            border-top: 1px solid #78a949;
+        }
+    }
+
+    .loading {
+        font-size: 3rem;
+        margin: 1rem auto;
+        text-align: center;
+        display: block;
+    }
+
+    .avatar.col-md-1 .fa-user {
+        width: 100%;
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .status {
+        .fa-video-camera {
+            color: #78a949;
+        }
+    }
+
+    .actions .btn {
+        color:white;
+        width: 20%;
+        justify-content: space-between;
+        height: 40px;
+        flex: 1;
+        margin: 5px;
+    }
+}

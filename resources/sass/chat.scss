@@ -1,0 +1,22 @@
+.chat_block {
+    display: block;
+    position: fixed;
+    width: 400px;
+    bottom: 10px;
+    right: 10px;
+    background: #e4e9f0;
+    transition-timing-function: ease-out;
+    transition: 0.2s;
+    transform: translateY(0);
+
+    & .pn-msg-list--light {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}
+
+.toggle {
+    transition-timing-function: ease-in !important;
+    transition: 0.25s;
+    transform: translateY(95%) !important;
+}

@@ -1,0 +1,35 @@
+@import 'chat.scss';
+@import "_footer.scss";
+
+#enter_room_fieldset {
+    border: 1px solid #78a949;
+    border-radius: 5px;
+
+    legend {
+        color: white;
+        background: #78a949;
+    }
+
+    .required {
+        color: red;
+        vertical-align: middle;
+    }
+
+    .optional {
+        color: gray;
+        font-weight: normal;
+    }
+
+    .submit {
+        color: white;
+        font-weight: bold;
+    }
+
+    .foot {
+        border-top: 1px solid #cdcdcd;
+
+        a {
+            color: #78a949;
+        }
+    }
+}

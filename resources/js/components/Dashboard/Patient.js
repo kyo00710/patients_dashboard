@@ -17,6 +17,9 @@ class Patient extends React.Component {
     }
     handleBusy = () => {
         this.updateParentState();
+        axios.defaults.headers = {
+            'X-CSRF-TOKEN': document.querySelector('[name="csrf-token"]')
+        };
         axios.patch('/api/room/doctor/patient/' + this.props.patient.vsee_id).then(() => {
             console.log("Announce doctor busy Successfully");
         })

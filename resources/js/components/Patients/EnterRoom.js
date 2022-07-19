@@ -58,6 +58,9 @@ class EnterRoomForm extends React.Component {
     enterWaitingRoom = () => {
         let self = this;
         // self.handleToggleVisibility();
+        axios.defaults.headers = {
+            'X-CSRF-TOKEN': document.querySelector('[name="csrf-token"]')
+        };
 
         axios.post('/api/room/patient', {
             name: this.state.patient_name,
@@ -91,7 +94,7 @@ class EnterRoomForm extends React.Component {
                             Please fill your email, in case doctor can call you <span className="optional">(optional)</span>
                         </label>
                         <input type="email" className="form-control" id="patient_email" name="patient_email"
-                               placeholder="Your Email" onChange={this.inputPatientEmail}/>
+                               placeholder="Your Email" onChange={this.inputEmail}/>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="reason" className="form-label  fw-bold">Reason for visit <span className="optional">(optional)</span></label>

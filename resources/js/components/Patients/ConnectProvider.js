@@ -33,6 +33,9 @@ class ConnectProvider extends React.Component {
     exitWaitingRoom = () => {
         let self = this;
         // self.handleToggleVisibility();
+        axios.defaults.headers = {
+            'X-CSRF-TOKEN': document.querySelector('[name="csrf-token"]')
+        };
 
         axios.delete('/api/room/patient/' + this.props.state.patient.vsee_id).then(() => {
             toast.success("Patient dropped Waiting room Successfully");

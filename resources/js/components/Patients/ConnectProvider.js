@@ -37,10 +37,13 @@ class ConnectProvider extends React.Component {
             'X-CSRF-TOKEN': document.querySelector('[name="csrf-token"]')
         };
 
-        axios.delete('/api/room/patient/' + this.props.state.patient.vsee_id).then(() => {
-            toast.success("Patient dropped Waiting room Successfully");
-            self.handleToggleVisibility();
-        })
+        axios.delete('/api/room/patient/' + this.props.state.patient.vsee_id)
+            .then(() => {
+                // toast.success("Patient dropped Waiting room Successfully");
+                self.handleToggleVisibility();
+            }).catch((error) => {
+                toast.error(error.message);
+            })
     }
 
     // Setup the `beforeunload` event listener

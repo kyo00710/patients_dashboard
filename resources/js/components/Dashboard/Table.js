@@ -3,6 +3,7 @@ import Patient from "./Patient";
 import PatientChat from "../Chat.tsx";
 import '../../../sass/dashboard.scss';
 import Footer from "../Footer";
+import {ToastContainer} from "react-toastify";
 
 class Table extends React.Component {
     constructor(props) {
@@ -58,6 +59,7 @@ class Table extends React.Component {
         let self = this;
         return (
             <div>
+                <ToastContainer/>
                 <fieldset id="dashboard_fieldset" className="mt-2">
                     <legend className="container fw-bold fs-5 p-2">
                         <i className="fa fa-bars me-2" aria-hidden="true"></i>Waiting Room

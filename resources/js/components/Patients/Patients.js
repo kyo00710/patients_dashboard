@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import EnterRoomForm from "./EnterRoom";
 import ConnectProvider from "./ConnectProvider";
+import { ToastContainer, toast } from 'react-toastify';
 import Footer from "../Footer";
 
 class Patients extends React.Component {
@@ -34,6 +35,7 @@ class Patients extends React.Component {
     render() {
         return (
             <div>
+                <ToastContainer />
                 <div className="card">
                     <div className="card-body text-center">
                         <h1 className="card-title fw-bold">Welcome to Code Challenge Waiting Room</h1>

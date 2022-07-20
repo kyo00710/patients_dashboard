@@ -68,10 +68,16 @@ class EnterRoomForm extends React.Component {
             reason: this.state.reason,
             vsee_id: this.state.vsee_id,
         }).then(() => {
-            toast.success("Employee Saved Successfully");
             self.handleToggleVisibility();
         }).catch((error) => {
-            toast.error(error.message);
+            if (error.response.status === 422) {
+                const errors = error.response.data.errors ?? [];
+                Object.keys(errors).forEach((item) => {
+                    toast.error(errors[item][0]);
+                })
+            } else {
+                toast.error(error.message);
+            }
         })
     }
 

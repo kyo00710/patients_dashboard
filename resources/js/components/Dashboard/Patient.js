@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import {toast} from "react-toastify";
 
 class Patient extends React.Component {
     constructor(props) {
@@ -20,9 +21,12 @@ class Patient extends React.Component {
         axios.defaults.headers = {
             'X-CSRF-TOKEN': document.querySelector('[name="csrf-token"]')
         };
-        axios.patch('/api/room/doctor/patient/' + this.props.patient.vsee_id).then(() => {
-            console.log("Announce doctor busy Successfully");
-        })
+        axios.patch('/api/room/doctor/patient/' + this.props.patient.vsee_id)
+            .then(() => {
+                // console.log("Announce doctor busy Successfully");
+            }).catch((error) => {
+                toast.error(error.message);
+            })
     }
 
     inVisitClass = () => {
